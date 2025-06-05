@@ -82,6 +82,8 @@ curl -X DELETE http://localhost:8000/api/tasks/1/
 ## Database Configuration
 
 By default, the project uses SQLite.
+Filtering Capabilites
+  you can filter tasks by their completions status 
 ## Project Structure
 
 taskmanager/
