@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .endpoint {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Management API</h1>
+    <p>The API is up and running. Use the following endpoints:</p>
+    
+    <div class="endpoint">
+        <strong>GET /api/tasks</strong> - Retrieve all tasks
+    </div>
+    
+    <div class="endpoint">
+        <strong>POST /api/tasks</strong> - Add a new task
+    </div>
+    
+    <div class="endpoint">
+        <strong>PUT /api/tasks/id</strong> - Update a task (mark as completed)
+    </div>
+    
+    <div class="endpoint">
+        <strong>DELETE /api/tasks/id</strong> - Delete a task
+    </div>
+</body>
+</html>
