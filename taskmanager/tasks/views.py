@@ -3,14 +3,17 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Task
 from .serializers import TaskSerializers
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 def home(request):
     return render(request, 'tasks/home.html')
 @api_view(['GET', 'POST'])
 def task_list(request):
     if request.method == 'GET':
+        completed_status = request.query_params.get('completed', None)
         tasks = Task.objects.all()
+        if completed_status is not None:
+            tasks = tasks.filter(completed = completed_status.lower() == 'true')
         serializer = TaskSerializers(tasks, many=True)
         return Response(serializer.data)
 
